@@ -74,7 +74,6 @@ export default function ItemList() {
   };
   return (
     <div>
-      <p> here is list</p>
 
       <Item {...item1} />
       <Item {...item2} />
@@ -91,3 +90,4 @@ export default function ItemList() {
     </div>
   )
 }
+
