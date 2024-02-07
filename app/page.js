@@ -1,11 +1,13 @@
+import Link from "next/link";
+
 export default function Page() {
   return <>
     <main>CPRG 306: Web Development 2 - Assignments</main>
     <p>
-      <a href="week-2">Week 2 </a>
+      <Link href="week-2">Week 2 </Link>
     </p>
     <p>
-      <a href="week-3">Week 3</a>
+      <Link href="week-3">Week 3</Link>
     </p>
   </>
 }
