@@ -19,20 +19,20 @@ export default function NewItem() {
     return (
         <div>
             <p> </p>
-            <form onSubmit={handleSubmit}>
+            <form className="w-full max-w-md bg-zinc shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
                 <label>
                     Name:
-                    <input className="shadow appearance-none border rounded w-50 py-2 px-3 text-gray-700"
+                    <input className="p-2.5 ml-5 text-1xl flex justify-center border rounded w-50 py-2 px-3 text-gray-700"
                         id="name" type="text" value={name} onChange={handleNameChange} />
 
                 </label>
                 <label>
                     Quantity:
-                    <input className="shadow appearance-none border rounded w-50 py-2 px-3 text-gray-700" type="number" value={quantity} onChange={(event) => setQuantity(event.target.value)} />
+                    <input className="p-2.5 ml-5 text-1xl flex justify-center border rounded w-50 py-2 px-3 text-gray-700" type="number" value={quantity} onChange={(event) => setQuantity(event.target.value)} />
                 </label>
                 <label>
                     Category:
-                    <select className="shadow appearance-none border rounded w-50 py-2 px-3 text-gray-700" value={category} onChange={(event) => setCategory(event.target.value)}>
+                    <select className="p-2.5 ml-5 text-1xl flex justify-center border rounded w-50 py-2 px-3 text-gray-700" value={category} onChange={(event) => setCategory(event.target.value)}>
                         <option value="produce">Produce</option>
                         <option value="dairy">Dairy</option>
                         <option value="bakery">Bakery</option>
@@ -47,7 +47,8 @@ export default function NewItem() {
                     </select>
                 </label>
 
-                <button className="w-100 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-md" type="submit">Add Item</button>
+                <button className="p-2.5 ml-5 text-1xl w-26 bg-blue-500 hover:bg-blue-700  flex justify-center items-center text-white font-bold rounded-md" type="submit"> + </button>
+
             </form>
         </div>
     );
