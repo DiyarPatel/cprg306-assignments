@@ -22,17 +22,17 @@ export default function NewItem() {
             <form className="w-full max-w-md bg-zinc shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
                 <label>
                     Name:
-                    <input className="p-2.5 ml-5 text-1xl flex justify-center border rounded w-50 py-2 px-3 text-gray-700"
+                    <input className="mt-4 text-1xl flex justify-center border rounded w-50 py-2 px-3 text-gray-700"
                         id="name" type="text" value={name} onChange={handleNameChange} />
 
                 </label>
                 <label>
                     Quantity:
-                    <input className="p-2.5 ml-5 text-1xl flex justify-center border rounded w-50 py-2 px-3 text-gray-700" type="number" value={quantity} onChange={(event) => setQuantity(event.target.value)} />
+                    <input className="mt-4 text-1xl flex justify-center border rounded w-50 py-2 px-3 text-gray-700" type="number" value={quantity} onChange={(event) => setQuantity(event.target.value)} />
                 </label>
                 <label>
                     Category:
-                    <select className="p-2.5 ml-5 text-1xl flex justify-center border rounded w-50 py-2 px-3 text-gray-700" value={category} onChange={(event) => setCategory(event.target.value)}>
+                    <select className="mt-4 text-1xl flex justify-center border rounded w-50 py-2 px-3 text-gray-700" value={category} onChange={(event) => setCategory(event.target.value)}>
                         <option value="produce">Produce</option>
                         <option value="dairy">Dairy</option>
                         <option value="bakery">Bakery</option>
@@ -46,9 +46,9 @@ export default function NewItem() {
                         <option value="other">Other</option>
                     </select>
                 </label>
-
-                <button className="p-2.5 ml-5 text-1xl w-26 bg-blue-500 hover:bg-blue-700  flex justify-center items-center text-white font-bold rounded-md" type="submit"> + </button>
-
+                <div className="mt-4 flex justify-center items-center mb-4">
+                    <button className=" p-2.5 ml-5 pt2 border-2 mb-3 w-80 h-15 bg-blue-500 text-2xl w-26 hover:bg-blue-700 text-white font-bold rounded-md" type="submit"> + </button>
+                </div>
             </form>
         </div>
     );
