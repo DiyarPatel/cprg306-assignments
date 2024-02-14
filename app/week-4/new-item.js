@@ -21,7 +21,7 @@ export default function NewItem() {
             <form className="w-full max-w-md bg-zinc shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
                 <label>
                     Name:
-                    <input className="mt-4 text-1xl flex justify-center border rounded w-50 py-2 px-3 text-white-700"
+                    <input className="mt-4 p-2 border border-gray-300 rounded-md w-full"
                         id="name" type="text" value={name} onChange={handleNameChange} />
 
                 </label>
