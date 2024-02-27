@@ -1,7 +1,8 @@
 "use client"
 import React, { useState } from 'react';
 import items from './items.json';
-import item from './item';
+import Item from './item';
+
 
 
 const ItemList = () => {
