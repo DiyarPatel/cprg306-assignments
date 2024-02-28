@@ -17,9 +17,9 @@ const ItemList = () => {
     return (
       <div>
         <button
-          className='p-3 bg-pink-500 text-black-500 border-2 border-pink-500 rounded-md hover:bg-pink-700 '
+          className='p-2 mb-2 w-60 h-10 bg-pink-500 border-2 border-blue-800 rounded-md hover:bg-pink-700 '
           onClick={() => setSortBy(value)}
-          style={{ backgroundColor: sortBy === value ? 'lightpink' : 'white' }}
+          style={{ backgroundColor: sortBy === value ? 'lightpink' : 'grey' }}
         >
           {lable}
         </button>
@@ -28,7 +28,7 @@ const ItemList = () => {
   };
   return (
     <div>
-      <div className='flex space-x-4'>
+      <div className='flex space-x-10'>
         {renderSortButton('Name', 'name')}
         {renderSortButton('Category', 'category')}
       </div>
