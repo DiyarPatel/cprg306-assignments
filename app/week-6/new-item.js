@@ -1,25 +1,26 @@
-"use client"
-import { useState } from "react";
+import React, { useState } from "react";
 
 export default function NewItem({ onAddItem }) {
     const [name, setName] = useState("");
     const [quantity, setQuantity] = useState(1);
     const [category, setCategory] = useState("produce");
 
-    
-
     function handleNameChange(event) {
         event.preventDefault();
         const newId = Math.random().toString(18).substr(4, 9);
-        const newItem = { id: newId, name, quantity, category };
+        const newItem = { id: newId, name, quantity: parseInt(quantity), category };
         onAddItem(newItem);
+
+        setName("");
+        setQuantity(1);
+        setCategory("produce");
     }
 
     return (
         <div className="">
             <form
                 className="w-full max-w-md bg-zinc-200 shadow-md rounded px-8 pt-6 pb-8 mb-4"
-                onSubmit={handleSubmit}
+                onSubmit={handleNameChange}
             >
                 <label className="block mb-4">
                     Name:
@@ -28,8 +29,8 @@ export default function NewItem({ onAddItem }) {
                         id="name"
                         type="text"
                         value={name}
-                        onChange={handleNameChange}
-                    />
+                        onChange={(event) => setName(event.target.value)}
+                        />
                 </label>
                 <label className="block mb-4">
                     Quantity:

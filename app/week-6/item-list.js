@@ -1,11 +1,10 @@
-"use client"
 import React, { useState } from 'react';
 import Item from './item';
-import ItemsData from './items-Data';
 
-const ItemList = () => {
+const ItemList = ({ items }) => {
   const [sortBy, setSortBy] = useState('name');
-  const sortedItems = [...ItemsData].sort((a, b) => {
+  
+  const sortedItems = [...items].sort((a, b) => {
     if (sortBy === 'name') {
       return a.name.localeCompare(b.name);
     } else if (sortBy === 'category') {
@@ -13,19 +12,24 @@ const ItemList = () => {
     }
     return 0;
   });
-  const renderSortButton = (lable, value) => {
+
+  const handleSortBy = (value) => {
+    setSortBy(value);
+  };
+
+  const renderSortButton = (label, value) => {
     return (
-      <div>
-        <button
-          className='p-2 mb-2 w-60 h-10 bg-pink-500 border-2 border-zinc-800 rounded-md hover:bg-pink-700 '
-          onClick={() => setSortBy(value)}
-          style={{ backgroundColor: sortBy === value ? 'lightpink' : 'white' }}
-        >
-          {lable}
-        </button>
-      </div>
+      <button
+        key={value}
+        className='p-2 mb-2 w-60 h-10 bg-pink-500 border-2 border-blue-800 rounded-md hover:bg-pink-700 '
+        onClick={() => handleSortBy(value)}
+        style={{ backgroundColor: sortBy === value ? 'lightpink' : 'grey' }}
+      >
+        {label}
+      </button>
     );
   };
+
   return (
     <div>
       <div className='flex space-x-10'>
