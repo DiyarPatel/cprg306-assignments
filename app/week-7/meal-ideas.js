@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
+import ItemsData from './items-Data.json';
 
 function MealIdeas({ ingredient }) {
   const [meals, setMeals] = useState([]);
