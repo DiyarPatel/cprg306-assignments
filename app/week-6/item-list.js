@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Item from './item';
+import ItemsData from './items-Data.json';
 
 const ItemList = ({ items }) => {
   const [sortBy, setSortBy] = useState('name');

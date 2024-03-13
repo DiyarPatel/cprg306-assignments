@@ -30,7 +30,7 @@ export default function NewItem({ onAddItem }) {
                         type="text"
                         value={name}
                         onChange={(event) => setName(event.target.value)}
-                        />
+                    />
                 </label>
                 <label className="block mb-4">
                     Quantity:

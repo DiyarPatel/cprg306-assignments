@@ -1,9 +1,10 @@
+"use client";
 import React, { useState } from 'react';
 import Item from './item';
 
-const ItemList = ({ items }) => {
+const ItemList = ({ items, onItemSelect }) => {
   const [sortBy, setSortBy] = useState('name');
-  
+
   const sortedItems = [...items].sort((a, b) => {
     if (sortBy === 'name') {
       return a.name.localeCompare(b.name);
@@ -38,7 +39,7 @@ const ItemList = ({ items }) => {
       </div>
       <div>
         {sortedItems.map((item) => (
-          <Item key={item.id} {...item} />
+          <Item key={item.id} {...item} onSelect={() => onItemSelect(item)} />
         ))}
       </div>
     </div>

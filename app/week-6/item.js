@@ -15,3 +15,4 @@ export default function Item({id, name, quantity, category, onDelete }) {
 
     );
 }
+
