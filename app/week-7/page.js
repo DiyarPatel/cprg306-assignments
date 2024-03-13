@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import ItemList from './item-list';
 import NewItem from './new-item';
 import MealIdeas from './meal-ideas';
-import ItemsData from './items-Data.json';
+import ItemsData from './items-Data';
 
 export default function Page() {
     const [items, setItems] = useState(ItemsData);
