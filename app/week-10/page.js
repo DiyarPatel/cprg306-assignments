@@ -17,10 +17,10 @@ export default function Page() {
     };
     return (
         <div className="flex flex-col items-center justify-center h-screen">
-             <h1 className="text-3xl font-bold mb-4"> Shopping List App </h1>
+            <h1 className="text-3xl font-bold mb-4"> Shopping List App </h1>
             {/* If user is not logged in, display login button */}
             {!user && (
-               
+
                 <button onClick={handleLogin}
                     className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
                 >Login with GitHub</button>
